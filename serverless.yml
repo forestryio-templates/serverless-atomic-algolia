@@ -1,0 +1,25 @@
+service:
+  name: atomic-algolia
+
+provider:
+  name: webtasks
+  environment: 
+    ALGOLIA_APP_ID: "${env:ALGOLIA_APP_ID, opt:ALGOLIA_APP_ID, self:custom.ALGOLIA_APP_ID}"
+    ALGOLIA_ADMIN_KEY: "${env:ALGOLIA_APP_ID, opt:ALGOLIA_APP_ID, self:custom.ALGOLIA_ADMIN_KEY}"
+    DEBOUNCE: "${env:DEBOUNCE, opt:DEBOUNCE, self:custom.DEBOUNCE}"
+    INDEXES: ${file(./config/indexes.js)}
+
+custom:
+  stage: "${opt:stage, self:provider.stage}"
+  ALGOLIA_APP_ID: ${file(./config/secrets.yml):ALGOLIA_APP_ID}
+  ALGOLIA_ADMIN_KEY: ${file(./config/secrets.yml):ALGOLIA_ADMIN_KEY}
+  DEBOUNCE: ${file(./config/secrets.yml):DEBOUNCE}
+
+functions:
+  main:
+    handler: handler
+    events:
+      - schedule: rate(1 day)
+
+plugins:
+  - '@webtask/serverless-webtasks'

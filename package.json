@@ -1,0 +1,20 @@
+{
+  "name": "webtasks-nodejs",
+  "version": "1.0.0",
+  "description": "Auth0 Webtasks NodeJS template for the Serverless Framework",
+  "main": "handler.js",
+  "keywords": [
+    "serverless",
+    "webtasks"
+  ],
+  "devDependencies": {
+    "@webtask/serverless-webtasks": "^1.0.1"
+  },
+  "dependencies": {
+    "atomic-algolia": "^0.3.6",
+    "deepmerge": "^2.0.1",
+    "dotenv": "^5.0.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
