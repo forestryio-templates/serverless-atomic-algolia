@@ -14,6 +14,16 @@ npm install serverless -g && npm install
 
 ## Configuration
 
+Before you can use this function, you need to authorize with the provider (Webtask by Auth0). This is extremely simple, just run:
+
+```
+serverless config credentials --provider webtasks
+```
+
+You will be asked for a phone number or email. You'll immediately receive a verification code. Enter the verification code and your profile will be entirely setup and ready to use.
+
+---
+
 This function needs the following to be configured:
 
 * A `.env` file with your Algolia Application ID and secret access key.
