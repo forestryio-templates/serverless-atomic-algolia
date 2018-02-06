@@ -1,8 +1,8 @@
 module.exports = () => {
   var indexes = [
     {
-      name: "blog",
-      url: "https://forestry.io/blog/algolia.json"
+      name: "YOUR_INDEX_NAME",
+      url: "PUBLIC_URL_OF_INDEX"
     }
   ]
 
