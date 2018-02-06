@@ -26,16 +26,16 @@ You will be asked for a phone number or email. You'll immediately receive a veri
 
 This function needs the following to be configured:
 
-* A `.env` file with your Algolia Application ID and secret access key.
+* A `secrets.yml` file with your Algolia Application ID and secret access key.
 * An `indexes.js` file with a list of your indexes and their JSON endpoints.
 
-To create your `.env` file, run:
+To create your `secrets.yml` file, run:
 
 ```
-cp ./config/.env.stub ./config/.env
+cp ./config/secrets.yml.stub ./config/secrets.yml
 ```
 
-Then open up `config/.env` and provide the values for `ALGOLIA_APP_ID` and `ALGOLIA_ADMIN_KEY` from your Algolia account.
+Then open up `config/secrets.yml` and provide the values for `ALGOLIA_APP_ID` and `ALGOLIA_ADMIN_KEY` from your Algolia account.
 
 Next, open up `config/indexes.js` and update the example index with your actual Algolia index information. E.g,
 
