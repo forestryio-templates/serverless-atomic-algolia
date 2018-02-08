@@ -83,4 +83,4 @@ Now each time a change is pushed to your repository, this function will be trigg
 
 > **Note:** 
 > Depending on how long your site takes to deploy, this may cause the index to be updated prematurely.
-> To fix this, add
+> To fix this, you can set the debounce variable in `secrets.yml` to make the function wait X number of seconds before running.
